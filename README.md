@@ -73,3 +73,11 @@ Acest proiect este licențiat sub **MIT License** (sau altă licență la aleger
 
 - **Numele tău**
 - Link GitHub / Website (opțional)
+from pathlib import Path
+
+text = Path("README.md").read_text(encoding="utf-8")
+
+required = ["Proiect Figma", "Link Figma", "Conținut", "Utilizare", "Autor"]
+
+for item in required:
+    print(f"{item}: {'OK' if item in text else 'MISSING'}")
